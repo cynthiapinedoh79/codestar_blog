@@ -20,5 +20,5 @@ from blog.views import my_blog
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', my_blog, name='blog'), # This line is now the homepage
+    path('blog/', my_blog, name='blog'),
 ]
