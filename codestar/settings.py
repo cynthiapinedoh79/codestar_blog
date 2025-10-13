@@ -29,9 +29,16 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-cynthiapine-codestarblo-zxdijq1zyax.ws-us121.gitpod.io',
-                 '.herokuapp.com',
-                 '127.0.0.1',]
+# settings.py
+import os
+
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    ".gitpod.io",      # any Gitpod workspace URL like 8000-xxxx.gitpod.io
+    ".herokuapp.com",  # your Heroku app when deployed
+]
+
 
 
 # Application definition
@@ -93,8 +100,10 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
-    "https://*.herokuapp.com"
+    "https://*.herokuapp.com",
+    "https://*.gitpod.io",
 ]
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
