@@ -1,1 +1,26 @@
+# Virtual Environment
 .venv/
+
+# Core dump files from crashes
+core.Microsoft*
+core.mongo*
+core.python*
+
+# Environment file (often contains secrets)
+env.py
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.py[cod]
+
+# Dependency folders (if you use JavaScript)
+node_modules/
+
+# IDE / Editor specific
+.vscode/
+.github/
+
+# Project-specific files
+cloudinary_python.txt
+blog/fixtures/
