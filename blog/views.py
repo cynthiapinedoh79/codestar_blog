@@ -9,4 +9,5 @@ class PostList(generic.ListView):
     # queryset = Post.objects.all() # Get all posts
     # queryset = Post.objects.all().order_by('-created_on') # Get all posts ordered by creation date descending
     queryset = Post.objects.filter(status=1) # Get all published posts, not drafts
-    template_name = 'post_list.html'
+    template_name = "blog/index.html"
+    paginate_by = 6
