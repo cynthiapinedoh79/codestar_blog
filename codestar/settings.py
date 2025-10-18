@@ -27,7 +27,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  # Only for development (working), change to False for deployment
+DEBUG = True  # Only for development (working), change to False for deployment
 
 ALLOWED_HOSTS = [
     "localhost",
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
     'django_summernote',
     'blog',
+    'about',
 ]
 
 MIDDLEWARE = [
