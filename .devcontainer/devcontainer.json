@@ -5,16 +5,21 @@
 {
 	"name": "Ona",
 	"build": {
- 		"context": ".",
- 		"dockerfile": "Dockerfile"
- 	},
+		"context": ".",
+		"dockerfile": "Dockerfile"
+	},
 	"features": {
+		// --- ADD THIS BLOCK ---
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.11"
+		},
+		// --- END OF BLOCK TO ADD ---
 		"ghcr.io/devcontainers/features/github-cli:1": {},
 		"ghcr.io/devcontainers/features/node:1": {}
 	},
 	"postCreateCommand": "bash .devcontainer/setup.sh",
 
-	// ---- MAKE SURE THIS BLOCK IS ADDED ----
+	// --- MAKE SURE THIS BLOCK IS ADDED ----
 	"customizations": {
 		"vscode": {
 			"settings": {
