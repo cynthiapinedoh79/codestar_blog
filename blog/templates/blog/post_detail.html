@@ -2,6 +2,7 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+{% block content %}
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
@@ -31,9 +32,9 @@
                 <h2>
                     {{ post.author | safe | upper }}
                 </h2>
-                <p class="card-text">
+                <article class="card-text">
                     {{ post.content | safe }}
-                </p>
+                </article>
                 <hr>
                 <h3>
                     {{ coder }}
@@ -58,8 +59,7 @@
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
-                <!-- We want a for loop inside the empty control tags
-          to iterate through each comment in comments -->
+                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
                 <div class="p-2 comments
           {% if not comment.approved and comment.author == user %}
@@ -81,8 +81,8 @@
 
                     <!-- Edit button only shows if the user is authenticated and is the author of the comment -->
                     {% if user.is_authenticated and comment.author == user %}
-                    <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-                    <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                    <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
+                    <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
                     {% endif %}
 
                 </div>
