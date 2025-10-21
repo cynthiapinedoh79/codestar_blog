@@ -43,14 +43,12 @@
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
             <li>
-                <a href="?page={{ page_obj.previous_page_number }}" 
-                class="page-link">&raquo; PREVIOUS</a>
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&raquo; PREVIOUS</a>
             </li>
             {% endif %}
             {% if page_obj.has_next %}
             <li>
-                <a href="?page={{ page_obj.next_page_number }}" 
-                class="page-link"> NEXT &raquo;</a>
+                <a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a>
             </li>
             {% endif %}
         </ul>
@@ -59,9 +57,8 @@
 </div>
 
 <!-- index.html content ends here -->
-
-            {% block copyright %}
-                Copyright 2003 Cynthia Pinedo
-            {% endblock copyright %}
-
 {% endblock %}
+
+{% block copyright %}
+Copyright 2003 Cynthia Pinedo
+{% endblock copyright %}
