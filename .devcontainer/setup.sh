@@ -9,14 +9,11 @@ if [ ! -d ".venv" ]; then
   python3 -m venv .venv
 fi
 
-# Activate the virtual environment and install dependencies
+# Install dependencies into the virtual environment
 echo "Installing dependencies from requirements.txt..."
-source .venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
+.venv/bin/python -m pip install --upgrade pip
+.venv/bin/pip install -r requirements.txt
 
 # Optional: Run Django migrations
 echo "Running Django migrations..."
-python3 manage.py migrate
-
-echo "Setup complete. Your environment is ready!"
+.venv/bin/python manage.py migrate
