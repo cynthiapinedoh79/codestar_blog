@@ -1,4 +1,4 @@
-#!/workspaces/codestar_blog/.venv/bin/python3
+#!/workspaces/codestar_blog/.venv/bin/python3.11
 # -*- coding: utf-8 -*-
 import re
 import sys
