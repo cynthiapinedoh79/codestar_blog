@@ -33,6 +33,7 @@
                     {{ post.author | safe | upper }}
                 </h2>
                 <article class="card-text">
+                    <h2 class="visually-hidden">{{ post.title }}</h2>
                     {{ post.content | safe }}
                 </article>
                 <hr>
